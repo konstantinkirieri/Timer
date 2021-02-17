@@ -1,4 +1,13 @@
 import Base from './baseClass.js'
+import {Howl, Howler} from 'howler';
+
+const {Howl, Howler} = require('howler');
+
+let sound = new Howl({
+    src: ['./02433.mp3']
+  });
+  
+  sound.play();
 
 export default class Timer extends Base {
     constructor(){

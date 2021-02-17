@@ -1,5 +1,6 @@
 import DataCalc from './dataCalc.js'
 import Timer from './timer.js'
+import './../style/style.css'
 
 class App {
     constructor(idCalc, idTimer){
