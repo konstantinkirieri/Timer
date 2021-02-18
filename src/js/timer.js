@@ -1,13 +1,6 @@
 import Base from './baseClass.js'
 import {Howl, Howler} from 'howler';
-
-const {Howl, Howler} = require('howler');
-
-let sound = new Howl({
-    src: ['./02433.mp3']
-  });
-  
-  sound.play();
+import Alert from '../mp3/02433.mp3'
 
 export default class Timer extends Base {
     constructor(){
@@ -29,6 +22,7 @@ export default class Timer extends Base {
         this.currentTime = 0;
         this.timer;
         this.timerEnd;
+        this.music = Alert;
     }
 
     baseMethod(event){
@@ -54,6 +48,11 @@ export default class Timer extends Base {
         this.timerEnd = setTimeout(() => {
             clearInterval(this.timer);
             div.innerHTML = '0';
+            let sound = new Howl({
+                src: [this.music]
+            });
+            sound.play();
+            setTimeout(() => sound.stop(), 2500);
         }, this.currentTime);
     }
 

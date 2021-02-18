@@ -33,14 +33,3 @@ class App {
 }
 
 new App('dataCalc', 'timer');
-
-// const buttonDataCalc = document.getElementById('dataCalc');
-// const buttonTimer = document.getElementById('timer');
-
-// buttonDataCalc.addEventListener('click', () => {
-//     let dataCalc = new DataCalc;
-//     dataCalc.render();
-// });
-// buttonTimer.addEventListener('click', () => {
-//     let timer = new Timer;
-// });

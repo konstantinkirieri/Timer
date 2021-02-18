@@ -1,6 +1,8 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const {Howl, Howler} = require('howler');
+const{DateTime} = require('luxon');
 
 module.exports = {
     mode: 'development',
@@ -22,6 +24,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [MiniCSSExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.mp3$/,
+                use: ['file-loader']
             }
         ]
     }

@@ -1,4 +1,4 @@
-import {DateTime} from './luxon.js';
+import {DateTime} from 'luxon';
 import Base from './baseClass.js'
 
 export default class DataCalc extends Base {
